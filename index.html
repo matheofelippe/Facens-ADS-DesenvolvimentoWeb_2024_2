@@ -10,13 +10,14 @@
 <body>
     <h1>Minha Página Pessoal</h1>
 
-    <form action="https://www.w3schools.com/action_page.php">
+    <form action="https://www.w3schools.com/action_page.php" method="post"
+    target="_blank">
         <label for="fname">First name:</label><br>
         <input type="text" id="fname" name="nome"><br>
         <label for="lname">Last name:</label><br>
         <input type="text" id="lname" name="sobrenome">
 
-        <br>
+        <!-- <br>
         <h2>Radio Button</h2>
         <input type="radio" id="html" name="fav_language" value="escolheu HTML" checked>
         <label for="html">HTML</label><br>
@@ -54,11 +55,55 @@
         </select>
 
         <br>
-        <h2>Textarea</h2>
-        <textarea name="message">
+
+
+        <br>
+        <h2>Field Set</h2>
+        <fieldset>
+            <legend>Dados Pessoais:</legend>
+            <h2>Textarea</h2>
+            <textarea name="message">
     The cat was playing 
     in the garden.
-        </textarea>
+            </textarea>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="John"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="Doe"><br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+
+        <br>
+        <h2>Data List</h2>
+        <input list="browsers" name="browser">
+        <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+        <input type="submit">
+
+        <br>
+        <h2>Outros</h2>
+        <input type="color"><br>
+        <input type="date"><br>
+        <input type="datetime-local"><br>
+        <input type="email"><br>
+        <input type="file"><br>
+        <input type="hidden"><br>
+        <input type="month"><br>
+        <input type="number"><br>
+        <input type="password"><br>
+
+        <br>
+        range<input type="range"><br>
+        reset<input type="reset"><br>
+        search<input type="search"><br>
+        time<input type="time"><br>
+        url<input type="url"><br>
+        week<input type="week"><br> -->
 
         <br><br>
         <input type="submit" value="Enviar">
