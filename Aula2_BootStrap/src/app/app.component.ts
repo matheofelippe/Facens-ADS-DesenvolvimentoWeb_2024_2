@@ -8,6 +8,25 @@ import { NgForm } from '@angular/forms';
 })
 
 export class AppComponent {
+  nomeApp: string = 'App do Angular';
+  menu: string[] = ['Casa', 'Sobre', 'Contato'];
+  index: number = 1;
+  descricao: string = 'Descrição da imagem 1';
 
+  card = {
+    title: 'Card 1',
+    description: 'This is the content of card 1.',
+  }
 
+  constructor() {
+    console.log('AppComponent: constructor');
+  }
+
+  onChangeImage() {
+    this.index ++;
+  }
+
+  onSubmit(form: NgForm) {
+    this.card.description = this.descricao;
+  }
 }
