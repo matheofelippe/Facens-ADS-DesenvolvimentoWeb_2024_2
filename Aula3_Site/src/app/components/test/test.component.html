@@ -1,0 +1,10 @@
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+  <input type="text" name="nome" ngModel>
+  <input type="text" name="idade" ngModel>
+  <button type="submit">Enviar</button>
+</form>
+
+<br>
+<ul>
+  <li *ngFor="let alu of lstAlunos">{{ alu.nome }} idade: {{ alu.idade }}</li>
+</ul>
