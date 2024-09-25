@@ -1,8 +1,15 @@
+<h1>Lista de tarefas</h1>
+
 <div *ngFor="let tarefa of tarefas">
     <ul>
         <li [ngStyle]="{'text-decoration': tarefa.concluida?'line-through':'none', 'color': tarefa.concluida?'green':'red'}">
             {{tarefa.descricao}} <br> Status: {{tarefa.concluida?'Done':'To do'}}
-        <button (click)="alteraStatus(tarefa)">Concluida</button>
+            <div *ngIf="tarefa.concluida; then thenBlock else elseBlock"></div>
+            <ng-template #thenBlock> <button (click)="alteraStatus(tarefa)">Á fazer</button> </ng-template>
+            <ng-template #elseBlock> <button (click)="alteraStatus(tarefa)">Concluir</button> </ng-template>
         </li>
     </ul>
   </div>
+
+
+
