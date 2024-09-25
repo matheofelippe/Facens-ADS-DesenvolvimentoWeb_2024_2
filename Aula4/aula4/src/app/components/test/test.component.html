@@ -1,0 +1,10 @@
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+    <input name="first" ngModel><br>
+    <input name="last" ngModel><br>
+    <button>Submit</button>
+   </form>
+
+
+   <br><br>
+   <p>Form value: {{ myForm.value | json }}</p>
+   <p>Form valid: {{ myForm.valid }}</p>

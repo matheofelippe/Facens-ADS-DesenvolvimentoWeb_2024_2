@@ -1,0 +1,52 @@
+<!-- Content -->
+<main class="container mt-4">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://picsum.photos/200/200?random={{index}}" class="card-img-top" alt="Card Image">
+          <div class="card-body">
+            <h5 class="card-title">{{card.title}}</h5>
+            <p class="card-text">{{card.description}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://picsum.photos/200/200?random=2" class="card-img-top" alt="Card Image">
+          <div class="card-body">
+            <h5 class="card-title">Card 2</h5>
+            <p class="card-text">This is the content of card 2.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://picsum.photos/200/200?random=3" class="card-img-top" alt="Card Image">
+          <div class="card-body">
+            <h5 class="card-title">Card 3</h5>
+            <p class="card-text">This is the content of card 3.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://picsum.photos/200/200?random=4" class="card-img-top" alt="Card Image">
+          <div class="card-body">
+            <h5 class="card-title">Card 3</h5>
+            <p class="card-text">This is the content of card 3.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </main>
+  
+    <div class="myForm">
+      <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+        <input type="text" name="titulo" id="titulo" [(ngModel)]="card.title">
+        <input type="text" name="descricao" id="descricao" [(ngModel)]="descricao">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+  
+      <button class="btn bg-danger" (click)="onChangeImage()">Mude Imagem</button>
+    </div>
+  

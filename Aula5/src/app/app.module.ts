@@ -1,26 +1,26 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DiretivasComponent } from './components/diretivas/diretivas.component';
+import { ListaDeTarefasComponent } from './components/lista-de-tarefas/lista-de-tarefas.component';
 import { FormsModule } from '@angular/forms';
-import { CabecalhoComponent } from './components/cabecalho/cabecalho.component';
-import { ContentComponent } from './components/content/content.component';
-import { RodapeComponent } from './components/rodape/rodape.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CabecalhoComponent,
-    ContentComponent,
-    RodapeComponent
+    DiretivasComponent,
+    ListaDeTarefasComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    provideClientHydration()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
